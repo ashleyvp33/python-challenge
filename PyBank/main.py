@@ -56,5 +56,13 @@ with open(budget_csv, encoding='UTF-8') as csvfile:
     #
     export_py_bank = os.path.join('analysis', 'py_bank.txt')
     with open(export_py_bank, 'w') as f:
-        f.write('Financial Analysis')
+        f.write('Author: Ashley Paillet\n')
+        f.write('----------------------------------------\n')
+        f.write('Financial Analysis\n')
+        f.write('----------------------------------------\n')
+        f.write(f'Total Months: {months}\n')
+        f.write(f'Total: $ {debit_credit}\n')
+        f.write(f'Average Change: $ {round(avg_diff, 2)}\n')
+        f.write(f'Greatest Increase in Profits: {max_increase_month}: $ {max_increase}\n')
+        f.write(f'Greatest Decrease in Profits: {max_decrease_month}: $ {max_decrease}\n')
         

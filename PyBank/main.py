@@ -31,7 +31,7 @@ with open(budget_csv, encoding='UTF-8') as csvfile:
          months = months + 1
          #
          if months > 1:
-            
+            #
             difference = month_income - previous_month_income
             net_income = net_income + difference
             avg_diff = net_income / (months - 1)
@@ -45,15 +45,16 @@ with open(budget_csv, encoding='UTF-8') as csvfile:
                 max_decrease_month = row[0]
          previous_month_income = int(row[1])
     #
+    # Analysis Summary
     print('Financial Analysis')
     print('----------------------------------------')
-    #
     print(f'Total Months: {months}')
     print(f'Total: $ {debit_credit}')
     print(f'Average Change: $ {round(avg_diff, 2)}')
     print(f'Greatest Increase in Profits: {max_increase_month}: $ {max_increase}')
     print(f'Greatest Decrease in Profits: {max_decrease_month}: $ {max_decrease}')
     #
+    # Export to .txt
     export_py_bank = os.path.join('analysis', 'py_bank.txt')
     with open(export_py_bank, 'w') as f:
         f.write('Author: Ashley Paillet\n')

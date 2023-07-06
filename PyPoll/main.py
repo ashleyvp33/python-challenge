@@ -23,6 +23,8 @@ with open(election_csv, encoding='UTF-8') as csvfile:
             ballots[row[2]] += 1
         else:
             ballots[row[2]] = 1
+    #
+    # Results Summary
     print('Election Results')
     print('----------------------------------------')
     print(f'Total Votes: {sum_ballot}')
@@ -36,6 +38,7 @@ with open(election_csv, encoding='UTF-8') as csvfile:
     print(f'Winner: {winner}')
     print('----------------------------------------')            
     #
+    # export to .txt
     export_py_bank = os.path.join('analysis', 'py_poll.txt')
     with open(export_py_bank, 'w') as f:
         f.write('Author: Ashley Paillet\n')

@@ -3,7 +3,7 @@
 #----------------------------------------
 # /Users/ashleypaillet/Desktop/git_HUB/03-python-challenge/python-challenge/PyBank
 # budget_data.csv
-budget_data = '../Resources/budget_data.csv'
+# budget_data = '../Resources/budget_data.csv'
 #
 import os
 import csv 
